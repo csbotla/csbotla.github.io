@@ -80,9 +80,10 @@ section#interests:hover~nav a[href="#interests"] {
 
 .section_heading {
     width: max-content;
-    padding: 30px 60px;
+    padding: 10px 60px;
     /* font-size: 80px; */
-    font-size: 5.7vw;
+    /* font-size: 5.7vw; */
+    font-size: 4vw;
     letter-spacing: 5px;
     background-color: #dfae4d;
     color: #53354a;
