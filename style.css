@@ -447,6 +447,15 @@ svg{
     /* flex: 0.7; */
 }
 
+.sm svg{
+    opacity: 0.75;
+    transition: all 0.3s ease-in-out;
+}
+
+.sm svg:hover {
+    opacity: 1;
+}
+
 .sm a {
     background-color: #2b2e4a;
     text-transform: lowercase;
@@ -454,20 +463,11 @@ svg{
 }
 
 .sm a:hover {
-    background-color: #f2af29;
-    color: #903749;
+    background-color: #dfae4d;
+    color: #2b2e4a;
 }
 
 
-.sm {
-    opacity: 0.7;
-    transition: all 0.5s ease-in-out;
-}
-
-
-.sm:hover {
-    opacity: 1;
-}
 
 
 
