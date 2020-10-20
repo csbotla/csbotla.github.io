@@ -430,6 +430,10 @@ a {
     /* margin: 120px; */
 }
 
+svg{
+    width: 100px;
+    height: 100px;
+}
 
 
 .sm {
@@ -629,6 +633,12 @@ a {
         margin: 10px;
     }
 
+    svg{
+        width: 75px;
+        height: 75px;
+    }
+    
+
     .sm_svg{
      
         height: 75px;
@@ -767,17 +777,11 @@ a {
         border-radius: 5px;
     }
 
-
-    .sm svg {
-        height: 50px;
-        width: 50px;
+    svg{
+        width: 70px;
+        height: 70px;
     }
-
-    .sm_svg {
-        width: 50px;
-        height: 50px;
-    }
-
+    
     #svgs {
         width: 80vw;
         height: 50vh;
