@@ -134,7 +134,7 @@ let abouttl = gsap.timeline({
 });
 
 abouttl
-    .fromTo("#aboutme_heading", 0.3, {
+    .fromTo(".aboutme h1", 0.3, {
         autoAlpha: 0,
         // x: -1000,
         ease: "back.inOut(0.3)"
@@ -189,7 +189,7 @@ let resumetl = gsap.timeline({
 });
 
 resumetl
-    .fromTo("#heading-resume", 0.3, {
+    .fromTo(".resume h1", 0.3, {
         autoAlpha: 0,
         // x: -700,
         ease: "back.inOut(0.3)"
@@ -221,7 +221,7 @@ let contacttl = gsap.timeline({
 });
 
 contacttl
-    .fromTo("#heading-contact", 0.3, {
+    .fromTo(".contact h1", 0.3, {
         // y: -500,
         autoAlpha: 0,
         // ease: "back.inOut(0.3)"
@@ -325,7 +325,7 @@ let intereststl = gsap.timeline({
 });
 
 intereststl
-    .fromTo("#heading-interests", 0.3, {
+    .fromTo(".interests h1", 0.3, {
         autoAlpha: 0,
         // y: -1000,
         ease: "back.inOut(0.3)"
@@ -413,7 +413,7 @@ svg.addEventListener("mouseenter", () => {
             value: d2,
         }],
         // fill: '#6F8695',
-        fill: '#f2af29',
+        fill: '#f2a365',
         opacity: '0.8'
 
     })
