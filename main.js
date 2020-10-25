@@ -56,8 +56,8 @@ let hometl = gsap.timeline({
 
 
 hometl
-    .to(".mobile-menu", {
-        autoAlpha: 0
+    .to(".mobile-menu", 0.01, {
+        display: "none"
     })
     .fromTo(".svgelement", 0.8, {
         autoAlpha: 0,
