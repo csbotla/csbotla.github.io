@@ -83,10 +83,14 @@ body {
     background-color: var(--bg-color);
     scroll-behavior: smooth;
     font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     position: relative;
     color: var(--fg-color);
     scroll-snap-type: y mandatory;
     box-sizing: border-box;
+    user-select: none;
+    -moz-user-select: none;
     /* transition: all 300ms ease-in-out; */
 }
 
@@ -101,6 +105,9 @@ section#interests:hover~nav a[href="#interests"] {
     filter: blur(0px);
 }
 
+.mobile-menu {
+    display: none;
+}
 
 .section {
     min-height: 100vh;
@@ -156,7 +163,8 @@ section#interests:hover~nav a[href="#interests"] {
     justify-content: center;
 }
 
-.contact .part1 h1,.interests .part1 h1{
+.contact .part1 h1,
+.interests .part1 h1 {
     margin-top: 80px;
     /* border: 2px solid red; */
 }
@@ -205,7 +213,8 @@ li {
 }
 
 .list-item,
-a {
+nav a,
+.contact a {
     border-radius: 3px;
     font-size: 1.09vw;
     border: 2px;
@@ -608,7 +617,7 @@ svg {
         clip-path: polygon(0 0, 100% 3%, 100% 100%, 0% 100%);
     }
 
-    .aboutme .part1 h1{
+    .aboutme .part1 h1 {
         margin-top: 70px;
     }
 
@@ -621,7 +630,7 @@ svg {
         height: max-content;
     }
 
-    #para:hover{
+    #para:hover {
         box-shadow: none;
     }
 
@@ -691,11 +700,73 @@ svg {
 
 @media (max-width:700px) {
 
+    .mobile-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        bottom: 5vh;
+        z-index: 10;
+        background-color: var(--bg-color-2);
+        /* opacity: 0.7; */
+        left: 0;
+        right: 0;
+        width: max-content;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 20px;
+        border-radius: 20px;
+        box-shadow: 0 1px 2px var(--fg-color-2);
+        /* border: 2px solid var(--fg-color); */
+    }
+
+    .mobile-menu a {
+        text-decoration: none !important;
+    }
+
+    .mobile-menu a:focus{
+        color: #000;
+        user-select: none;
+        outline: none;
+        background-color: transparent;
+    }
+
+    .mobile-menu-svg {
+        user-select: none;
+        width: 20px;
+        height: 30px;
+        padding: 3px;
+        margin: 0px 8px;
+    }
+
+    #interests-svg path {
+        stroke-width: 20;
+    }
+
+    .mobile-menu-svg path {
+        fill: var(--fg-color);
+        stroke: var(--bg-color);
+        stroke-width: 20;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        transition: all 0.7s ease-in-out;
+    }
+
+    .mobile-menu-svg:hover path {
+        fill: var(--bg-color);
+        stroke: var(--hover-color);
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 100;
+        /* transition: all 0.3s ease-out; */
+    }
+
+
     .part1 {
         flex: 0.2;
         min-height: 200px;
     }
-    .part2{
+
+    .part2 {
         flex: 0.8;
     }
 
@@ -726,7 +797,7 @@ svg {
         height: max-content;
     }
 
-    #para:hover{
+    #para:hover {
         box-shadow: none;
     }
 
@@ -787,6 +858,7 @@ svg {
         min-width: 82vw;
         min-height: 500px;
         border-radius: 5px;
+        z-index: -1;
     }
 
     svg {
