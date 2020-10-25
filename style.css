@@ -707,7 +707,7 @@ svg {
         position: fixed;
         bottom: 5vh;
         z-index: 10;
-        background-color: var(--bg-color-2);
+        background-color: var(--bg-color);
         /* opacity: 0.7; */
         left: 0;
         right: 0;
@@ -733,8 +733,8 @@ svg {
 
     .mobile-menu-svg {
         user-select: none;
-        width: 20px;
-        height: 30px;
+        width: 25px;
+        height: 35px;
         padding: 3px;
         margin: 0px 8px;
     }
@@ -753,10 +753,11 @@ svg {
     }
 
     .mobile-menu-svg:hover path {
-        fill: var(--bg-color);
+        fill: var(--hover-color);
         stroke: var(--hover-color);
-        stroke-dasharray: 1000;
-        stroke-dashoffset: 100;
+        stroke-width: 10;
+        stroke-dasharray: 2000;
+        stroke-dashoffset: 000;
         /* transition: all 0.3s ease-out; */
     }
 
