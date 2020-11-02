@@ -364,7 +364,7 @@ nav a,
 .svgelement {
     height: 400px;
     width: 400px;
-    filter:drop-shadow(5px 5px 20px #946969) drop-shadow(-5px -5px 20px #eeeeee4d);
+    filter:drop-shadow(5px 5px 20px var(--bg-color-2)) drop-shadow(-5px -5px 20px var(--bg-color));
     animation: animate 2s ease-in-out infinite;
 }
 
