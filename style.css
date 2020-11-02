@@ -829,7 +829,7 @@ svg {
     }
 
     #para:hover {
-        box-shadow: none;
+        /* box-shadow: none; */
     }
 
     .aboutme #developer {
