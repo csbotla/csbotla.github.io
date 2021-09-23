@@ -63,7 +63,6 @@ body {
         align-items: center;
         justify-content: center;
         height: 100vh;
-        // border: 2px solid ghostwhite
     }
 
     .logo {
@@ -103,13 +102,6 @@ body {
         }
 
     }
-
-    // @keyframes loader {
-    //     0% {
-    //         box-shadow: -2px -2px 4px var(--tone1), 2px 2px 4px var(--tone2);
-    //     }
-
-    // }
 
 
 }
@@ -162,11 +154,9 @@ section {
 
 
 nav {
-    // text-align: center;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    // border: 1px solid burlywood;
     margin-top: 0px;
     z-index: 1000;
     width: 100%;
@@ -333,7 +323,6 @@ nav {
     justify-content: space-around;
     flex-direction: column;
     flex-wrap: wrap;
-    // border: 2px solid yellow;
 
 
     .about-info {
@@ -367,21 +356,14 @@ nav {
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    // border: 2px solid yellow;
 
-    .resume-title {
-        // z-index: 0;
-        // flex: 0.5;
-    }
 
 
     #resumeiframe {
-        // box-shadow: 5px 5px 5px var(--tone1), -5px -5px 5px var(--tone2);
         margin: 10vmin 5vmin;
         height: 85vh;
         width: 100vmin;
         border-radius: 10px;
-        // border: 2px solid red;
     }
 
 
@@ -403,25 +385,6 @@ nav {
         flex: 0.2;
     }
 
-    // .company-div {
-    //     display: flex;
-    //     align-content: center;
-    //     justify-content: space-between;
-    //     flex-direction: column;
-    //     // border: 2px solid var(--tone2);
-    //     box-shadow: 2.5px 2.5px 5px var(--tone1), -2.5px -2.5px 5px var(--tone2);
-    //     height: fit-content;
-    //     width: fit-content;
-    //     padding: 25px 50px;
-    //     margin: 5vmin;
-    //     border-radius: 10px;
-    //     transition: all 0.3s ease-in-out;
-    // }
-
-    // .company-div:hover {
-    //     box-shadow: inset 5px 5px 15px var(--tone1), inset -5px -5px 15px var(--tone2);
-    // }
-
     .work-exp {
         width: 80vw;
         max-width: 90vmin;
@@ -438,7 +401,6 @@ nav {
         width: 25vmin;
         max-width: 120px;
         max-height: 80px;
-        // border: 2px solid red;
     }
 
     .constella-svg {
@@ -456,7 +418,6 @@ nav {
     }
 
     .svg-container {
-        // border: 2px solid red;
         box-shadow: 2.5px 2.5px 5px var(--tone1), -2.5px -2.5px 5px var(--tone2);
         display: flex;
         flex-direction: column;
@@ -541,11 +502,12 @@ nav {
         height: 9vmin;
         padding: 2vmin;
         border-radius: 5px;
-        box-shadow: 2.5px 2.5px 5px var(--tone1), -2.5px -2.5px 5px var(--tone2);
+        box-shadow: 0vmin 0vmin 1vmin var(--tone1), 0vmin 0vmin 1vmin var(--tone2);
+        transition: all 0.5s ease-in-out;
     }
 
     .svg:hover {
-        animation: loader 1s ease-in-out infinite;
+        box-shadow: 0vmin 0vmin 2vmin var(--tone1), 0vmin 0vmin 2vmin var(--tone2);
     }
 
     .linkedin svg {
@@ -760,9 +722,6 @@ footer {
             padding: 10px auto;
         }
 
-
-
-
     }
 
     footer {
@@ -770,4 +729,4 @@ footer {
     }
 
 
-}   
+}
