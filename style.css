@@ -610,13 +610,15 @@ nav ul li a:hover {
   height: 9vmin;
   padding: 2vmin;
   border-radius: 5px;
-  -webkit-box-shadow: 2.5px 2.5px 5px var(--tone1), -2.5px -2.5px 5px var(--tone2);
-          box-shadow: 2.5px 2.5px 5px var(--tone1), -2.5px -2.5px 5px var(--tone2);
+  -webkit-box-shadow: 0vmin 0vmin 1vmin var(--tone1), 0vmin 0vmin 1vmin var(--tone2);
+          box-shadow: 0vmin 0vmin 1vmin var(--tone1), 0vmin 0vmin 1vmin var(--tone2);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .contact .svg:hover {
-  -webkit-animation: loader 1s ease-in-out infinite;
-          animation: loader 1s ease-in-out infinite;
+  -webkit-box-shadow: 0vmin 0vmin 2vmin var(--tone1), 0vmin 0vmin 2vmin var(--tone2);
+          box-shadow: 0vmin 0vmin 2vmin var(--tone1), 0vmin 0vmin 2vmin var(--tone2);
 }
 
 .contact .linkedin svg .path1 {
