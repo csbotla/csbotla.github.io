@@ -74,53 +74,28 @@ body {
   padding: 5vmin 4vmin;
   font-size: 4vmin;
   font-weight: 900;
-  border: 2px solid var(--tone2);
   border-radius: 3vmin;
   color: var(--tone2);
-  -webkit-box-shadow: 2px 2px 4px var(--tone1), -2px -2px 4px var(--tone2);
-          box-shadow: 2px 2px 4px var(--tone1), -2px -2px 4px var(--tone2);
+  -webkit-box-shadow: 4px 0px 4px var(--tone1), -4px 0px 4px var(--tone2);
+          box-shadow: 4px 0px 4px var(--tone1), -4px 0px 4px var(--tone2);
   text-shadow: 2px 2px 4px var(--tone1), -2px -2px 4px var(--tone2);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-  -webkit-animation: loader 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
-          animation: loader 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+  -webkit-animation: loader 1s ease-in-out infinite alternate;
+          animation: loader 1s ease-in-out infinite alternate;
 }
 
 @-webkit-keyframes loader {
-  25% {
-    -webkit-box-shadow: 0px 2.5px 5px var(--tone1), 0px -2.5px 5px var(--tone2);
-            box-shadow: 0px 2.5px 5px var(--tone1), 0px -2.5px 5px var(--tone2);
-  }
-  50% {
-    -webkit-box-shadow: -2.5px 0px 5px var(--tone1), 2.5px 0px 5px var(--tone2);
-            box-shadow: -2.5px 0px 5px var(--tone1), 2.5px 0px 5px var(--tone2);
-  }
-  75% {
-    -webkit-box-shadow: 0px 2.5px 5px var(--tone1), 0px 2.5px 5px var(--tone2);
-            box-shadow: 0px 2.5px 5px var(--tone1), 0px 2.5px 5px var(--tone2);
-  }
   100% {
-    -webkit-box-shadow: 2.5px 0px 5px var(--tone1), -2.5px 0px 5px var(--tone2);
-            box-shadow: 2.5px 0px 5px var(--tone1), -2.5px 0px 5px var(--tone2);
+    -webkit-box-shadow: -4px 0px 4px var(--tone1), 4px 0px 4px var(--tone2);
+            box-shadow: -4px 0px 4px var(--tone1), 4px 0px 4px var(--tone2);
   }
 }
 
 @keyframes loader {
-  25% {
-    -webkit-box-shadow: 0px 2.5px 5px var(--tone1), 0px -2.5px 5px var(--tone2);
-            box-shadow: 0px 2.5px 5px var(--tone1), 0px -2.5px 5px var(--tone2);
-  }
-  50% {
-    -webkit-box-shadow: -2.5px 0px 5px var(--tone1), 2.5px 0px 5px var(--tone2);
-            box-shadow: -2.5px 0px 5px var(--tone1), 2.5px 0px 5px var(--tone2);
-  }
-  75% {
-    -webkit-box-shadow: 0px 2.5px 5px var(--tone1), 0px 2.5px 5px var(--tone2);
-            box-shadow: 0px 2.5px 5px var(--tone1), 0px 2.5px 5px var(--tone2);
-  }
   100% {
-    -webkit-box-shadow: 2.5px 0px 5px var(--tone1), -2.5px 0px 5px var(--tone2);
-            box-shadow: 2.5px 0px 5px var(--tone1), -2.5px 0px 5px var(--tone2);
+    -webkit-box-shadow: -4px 0px 4px var(--tone1), 4px 0px 4px var(--tone2);
+            box-shadow: -4px 0px 4px var(--tone1), 4px 0px 4px var(--tone2);
   }
 }
 
@@ -734,51 +709,24 @@ footer {
     padding: 5vmin 4vmin;
     font-size: 4vmin;
     font-weight: 900;
-    border: 2px solid var(--tone2);
     border-radius: 3vmin;
     color: var(--tone2);
-    -webkit-box-shadow: 2px 2px 1px var(--tone1), -2px -2px 1px var(--tone2);
-            box-shadow: 2px 2px 1px var(--tone1), -2px -2px 1px var(--tone2);
+    -webkit-box-shadow: 4px 0px 4px var(--tone1), -4px 0px 4px var(--tone2);
+            box-shadow: 4px 0px 4px var(--tone1), -4px 0px 4px var(--tone2);
     text-shadow: 0.5px 0.5px 1px var(--tone1), -0.5px -0.5px 1px var(--tone2);
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-    -webkit-animation: loader 4s ease-in-out infinite;
-            animation: loader 4s ease-in-out infinite;
+    -webkit-animation: loader 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate;
+            animation: loader 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate;
   }
   @-webkit-keyframes loader {
-    25% {
-      -webkit-box-shadow: 0px 0.5px 1px var(--tone1), 0px -0.5px 1px var(--tone2);
-              box-shadow: 0px 0.5px 1px var(--tone1), 0px -0.5px 1px var(--tone2);
-    }
-    50% {
-      -webkit-box-shadow: -0.5px 0px 1px var(--tone1), 0.5px 0px 1px var(--tone2);
-              box-shadow: -0.5px 0px 1px var(--tone1), 0.5px 0px 1px var(--tone2);
-    }
-    75% {
-      -webkit-box-shadow: 0px 0.5px 1px var(--tone1), 0px 0.5px 1px var(--tone2);
-              box-shadow: 0px 0.5px 1px var(--tone1), 0px 0.5px 1px var(--tone2);
-    }
     100% {
-      -webkit-box-shadow: 0.5px 0px 1px var(--tone1), -0.5px 0px 1px var(--tone2);
-              box-shadow: 0.5px 0px 1px var(--tone1), -0.5px 0px 1px var(--tone2);
+      -webkit-box-shadow: -4px 0px 4px var(--tone1), 4px 0px 4px var(--tone2);
+              box-shadow: -4px 0px 4px var(--tone1), 4px 0px 4px var(--tone2);
     }
   }
   @keyframes loader {
-    25% {
-      -webkit-box-shadow: 0px 0.5px 1px var(--tone1), 0px -0.5px 1px var(--tone2);
-              box-shadow: 0px 0.5px 1px var(--tone1), 0px -0.5px 1px var(--tone2);
-    }
-    50% {
-      -webkit-box-shadow: -0.5px 0px 1px var(--tone1), 0.5px 0px 1px var(--tone2);
-              box-shadow: -0.5px 0px 1px var(--tone1), 0.5px 0px 1px var(--tone2);
-    }
-    75% {
-      -webkit-box-shadow: 0px 0.5px 1px var(--tone1), 0px 0.5px 1px var(--tone2);
-              box-shadow: 0px 0.5px 1px var(--tone1), 0px 0.5px 1px var(--tone2);
-    }
     100% {
-      -webkit-box-shadow: 0.5px 0px 1px var(--tone1), -0.5px 0px 1px var(--tone2);
-              box-shadow: 0.5px 0px 1px var(--tone1), -0.5px 0px 1px var(--tone2);
+      -webkit-box-shadow: -4px 0px 4px var(--tone1), 4px 0px 4px var(--tone2);
+              box-shadow: -4px 0px 4px var(--tone1), 4px 0px 4px var(--tone2);
     }
   }
   nav {
