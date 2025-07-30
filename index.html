@@ -1,343 +1,355 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./style.css" rel="stylesheet" />
-    <title>Chandra Shekhar</title>
-  </head>
+<html lang="en" class="scroll-smooth">
 
-  <body>
-    <div class="loader">
-      <div class="loading">
-        <div class="logo">C &nbsp; S</div>
-      </div>
-    </div>
-    <nav>
-      <div class="logo">C &nbsp; S</div>
-      <ul class="large-screen-nav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="small-screen-nav">
-        <a href="#"><span class="nav-btn">🏠</span></a>
-        <a href="#about"><span class="nav-btn">👨‍🔧</span></a>
-        <a href="#resume"><span class="nav-btn">🤹🏼</span></a>
-        <a href="#contact"><span class="nav-btn">📭</span></a>
-      </div>
-    </nav>
-    <section class="home">
-      <div class="small-intro">Hey, This is</div>
-      <div class="name" style="">Chandra Shekhar</div>
-      <div class="tagline">Software-Engineer</div>
-    </section>
-    <section class="about" id="about">
-      <div class="about-title title">About</div>
-      <p class="about-info">
-        - writes a bunch of <i>if else</i> statements for a living a.k.a
-        Software-Engineer😁 <br />
-        - Could not have a convocation 🎓 (2020 you know...) but definitely had
-        a B.E in IT from Chaitanya Bharathi Institute of Technology, Osmania
-        University <br />
-        - Sometimes stays up late debugging code 💻 <br />
-        - Nothing works: either restart or refresh 🔁 <br />
-        - Learning never ends 🌱<br />
-        - Cricket, Movies, Physics, Deep Learning, etc interests me 🏓<br />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chandra shekhar botla</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            accent: {
+              lighter: 'hsl(324, 15%, 85%)',  // Very light for subtle backgrounds
+              light: 'hsl(324, 15%, 65%)',    // Light for dark mode text
+              DEFAULT: 'hsl(324, 15%, 46%)',  // Base color #896279
+              dark: {
+                DEFAULT: 'hsl(324, 15%, 36%)',  // Darker for light mode text
+                hover: 'hsl(324, 15%, 55%)'     // Mid-tone for hover states
+              },
+              darker: 'hsl(324, 15%, 26%)',   // Darkest for emphasis
+            },
+            dark: {
+              bg: '#111',
+            }
+          },
+          spacing: {
+            // Golden ratio spacing (1.618)
+            'gr1': '0.618rem',    // ~10px
+            'gr2': '1rem',        // base 16px
+            'gr3': '1.618rem',    // ~26px
+            'gr4': '2.618rem',    // ~42px
+            'gr5': '4.236rem',    // ~68px
+            'gr6': '6.854rem',    // ~110px
+            'gr7': '11.089rem',   // ~177px
+          },
+          fontSize: {
+            // Golden ratio typography
+            'gr-sm': ['0.618rem', '1rem'],
+            'gr-md': ['0.809rem', '1.309rem'], // Added in between sm and base
+            'gr-base': ['1rem', '1.618rem'],
+            'gr-lg': ['1.618rem', '2rem'],
+            'gr-xl': ['2.618rem', '3rem'],
+            'gr-2xl': ['4.236rem', '4.5rem'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="bg-white dark:bg-dark-bg text-gray-900 dark:text-gray-100 antialiased">
+  <button id="theme-toggle" aria-label="Toggle dark mode"
+    class="fixed top-gr3 right-gr3 z-50 w-10 h-10 flex items-center justify-center text-xl bg-transparent hover:bg-gray-200 dark:hover:bg-gray-800 rounded-full transition-colors">
+    🌓
+  </button>
+
+  <button id="mobile-menu-toggle" aria-label="Toggle mobile menu"
+    class="fixed top-gr3 right-gr3 z-50 hidden md:hidden text-xl">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <nav class="fixed top-gr4 left-gr4 z-40 hidden lg:flex flex-col gap-gr2">
+    <a href="#about"
+      class="nav-link text-gr-lg text-gray-600 dark:text-gray-400 hover:text-accent-dark dark:hover:text-accent-light transition-colors">about</a>
+    <a href="#experience"
+      class="nav-link text-gr-lg text-gray-600 dark:text-gray-400 hover:text-accent-dark dark:hover:text-accent-light transition-colors">experience</a>
+    <a href="#projects"
+      class="nav-link text-gr-lg text-gray-600 dark:text-gray-400 hover:text-accent-dark dark:hover:text-accent-light transition-colors">projects</a>
+    <a href="#skills"
+      class="nav-link text-gr-lg text-gray-600 dark:text-gray-400 hover:text-accent-dark dark:hover:text-accent-light transition-colors">skills</a>
+    <a href="#education"
+      class="nav-link text-gr-lg text-gray-600 dark:text-gray-400 hover:text-accent-dark dark:hover:text-accent-light transition-colors">education</a>
+    <a href="#achievements"
+      class="nav-link text-gr-lg text-gray-600 dark:text-gray-400 hover:text-accent-dark dark:hover:text-accent-light transition-colors">achievements</a>
+  </nav>
+
+  <div id="mobile-menu"
+    class="fixed inset-0 bg-white dark:bg-dark-bg z-40 hidden flex-col items-center justify-center gap-8">
+    <a href="#about"
+      class="text-2xl font-medium text-gray-600 dark:text-gray-400 hover:text-accent-dark dark:hover:text-accent-light">about</a>
+    <a href="#experience"
+      class="text-2xl font-medium text-gray-600 dark:text-gray-400 hover:text-accent-dark dark:hover:text-accent-light">experience</a>
+    <a href="#projects"
+      class="text-2xl font-medium text-gray-600 dark:text-gray-400 hover:text-accent-dark dark:hover:text-accent-light">projects</a>
+    <a href="#skills"
+      class="text-2xl font-medium text-gray-600 dark:text-gray-400 hover:text-accent-dark dark:hover:text-accent-light">skills</a>
+    <a href="#education"
+      class="text-2xl font-medium text-gray-600 dark:text-gray-400 hover:text-accent-dark dark:hover:text-accent-light">education</a>
+    <a href="#achievements"
+      class="text-2xl font-medium text-gray-600 dark:text-gray-400 hover:text-accent-dark dark:hover:text-accent-light">achievements</a>
+  </div>
+
+  <div class="max-w-3xl mx-auto px-gr3 lg:pl-gr7">
+    <header id="about" class="min-h-screen flex flex-col justify-center">
+      <h1 class="text-gr-2xl font-bold mb-gr3">chandra shekhar botla</h1>
+      <p class="text-gr-lg text-gray-600 dark:text-gray-400 mb-gr4">full stack developer building impactful web
+        experiences
       </p>
-    </section>
-    <section class="resume" id="resume">
-      <div class="resume-title title">Resume</div>
-      <div class="resume-info">
-        <iframe
-          id="resumeiframe"
-          src="https://drive.google.com/file/d/1Awr6ZhTotzoclF1i_gQk5LvQhJ1EF917/preview"
-          frameborder="0"
-        ></iframe>
+      <div class="flex gap-gr3 text-gr-lg">
+        <a href="mailto:cs.botla@gmail.com" alt="email"
+          class="text-gray-600 hover:text-accent-dark dark:text-accent-light dark:hover:text-accent-dark-hover transition-colors">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://linkedin.com/in/chandrashekhar19" target="_blank" alt="linkedin"
+          class="text-gray-600 hover:text-accent-dark dark:text-accent-light dark:hover:text-accent-dark-hover transition-colors">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/csbotla" target="_blank" alt="github"
+          class="text-gray-600 hover:text-accent-dark dark:text-accent-light dark:hover:text-accent-dark-hover transition-colors">
+          <i class="fab fa-github"></i>
+        </a>
       </div>
-    </section>
-    <section class="work">
-      <div class="work-title title">Experience</div>
-      <div class="work-exp">
-        <div class="listen2it">
-          <div class="listen2it-svg company-div">
-            <div class="svg-container">
-              <a href="https://getlisten2it.com" target="_blank">
-                <svg
-                  class="company-svg"
-                  viewBox="0 0 50 50"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle cx="25" cy="25" r="25" fill="#2D79F6" />
-                  <rect
-                    x="22.6562"
-                    y="10.5469"
-                    width="4.29688"
-                    height="28.9062"
-                    rx="2.14844"
-                    fill="white"
-                  />
-                  <rect
-                    x="29.6875"
-                    y="17.1875"
-                    width="4.29688"
-                    height="15.625"
-                    rx="2.14844"
-                    fill="white"
-                  />
-                  <rect
-                    x="16.0156"
-                    y="17.1875"
-                    width="4.29688"
-                    height="15.625"
-                    rx="2.14844"
-                    fill="white"
-                  />
-                  <rect
-                    x="36.3281"
-                    y="21.0938"
-                    width="4.29688"
-                    height="7.42188"
-                    rx="2.14844"
-                    fill="white"
-                  />
-                  <rect
-                    x="9.375"
-                    y="21.0938"
-                    width="4.29688"
-                    height="7.42188"
-                    rx="2.14844"
-                    fill="white"
-                  />
-                </svg>
-              </a>
-              <span class="company-name">Listen2it</span>
-            </div>
-          </div>
-        </div>
-        <div class="constella">
-          <div class="constella-svg company-div">
-            <div class="svg-container">
-              <a href="http://constellaintelligence.com" target="_blank">
-                <div class="group-svgs">
-                  <svg
-                    class="company-svg"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 560.75 98.24"
-                  >
-                    <defs>
-                      <style>
-                        .cls-1 {
-                          fill: var(--tone2);
-                        }
-                      </style>
-                    </defs>
-                    <title>ConstellaForge</title>
-                    <g id="Layer_2" data-name="Layer 2">
-                      <g id="Layer_1-2" data-name="Layer 1">
-                        <path
-                          class="cls-1"
-                          d="M70.78,60.74Q69.33,71,62.32,76.85a25.4,25.4,0,0,1-16.77,5.81q-12.67,0-19.8-8.85T18.62,49.12q0-15.7,7.19-24.62t19.74-8.91q9.38,0,15.78,4.81t8.78,14.06H88.2Q85.31,17.7,73.68,8.85T45.55,0Q25,0,12.54,13.21T0,49.12Q0,71.58,12.68,84.91,25.21,98.25,45.55,98.24q16.91,0,29.05-9.77t14-27.73Z"
-                        />
-                        <path
-                          class="cls-1"
-                          d="M156.2,36.05q-9.51-9.64-25.09-9.64T106,36.18q-9.63,9.65-9.64,25.88T106,88q9.51,9.76,25.09,9.77T156.2,88q9.5-9.78,9.5-25.89Q165.7,45.69,156.2,36.05ZM144.12,78.24q-4.69,5.73-13,5.74t-13-5.68c-3.12-3.79-4.68-9.19-4.68-16.24S115,49.61,118.1,45.82s7.46-5.68,13-5.68,9.88,1.92,13,5.75,4.69,9.22,4.69,16.17S147.24,74.41,144.12,78.24Z"
-                        />
-                        <path
-                          class="cls-1"
-                          d="M231.65,32.81q-6.41-6.39-17.49-6.4-13.47,0-21.26,11.36V28H176.8V96.13h16.63V58q0-8.05,4.43-12.61a14.4,14.4,0,0,1,10.75-4.55q12.81,0,12.81,12.94V96.13h16.64V51Q238.06,39.21,231.65,32.81Z"
-                        />
-                        <path
-                          class="cls-1"
-                          d="M303.61,63q-5.61-4.89-18-7.14L277,54.54q-6.08-1.07-8.72-3a6.22,6.22,0,0,1-2.63-5.34q0-7.92,11.88-7.93,7,0,10.56,2.58t3.83,8.65h15.71q-.93-23.1-30.1-23.11-13.47,0-20.86,5.48T249.28,47q0,16.91,22.32,20.59l7.79,1.33q7.53,1.32,10.43,3.3a6.47,6.47,0,0,1,2.9,5.68q0,8.18-13.46,8.19-7.53,0-11-2.65t-4.16-9H247.83Q249.15,98,279,98q14.38,0,22.31-5.54t7.92-15.85Q309.22,67.88,303.61,63Z"
-                        />
-                        <path
-                          class="cls-1"
-                          d="M353.19,40.67V28H339.73V8.19H323.22V28H312.65V40.67h10.57V79.23q0,9.1,5.08,13.26t16.18,4.17c2.2,0,5.11-.18,8.71-.53V83.45h-5.67c-2.82,0-4.83-.43-6-1.31s-1.77-2.43-1.77-4.63V40.67Z"
-                        />
-                        <path
-                          class="cls-1"
-                          d="M426.61,62.36q0-16.5-9.12-26.67T392.93,25.52q-15,0-24.42,9.77t-9.24,25.88c0,10.74,3.12,20.26,9.37,26.78s14.43,9.77,24.56,9.77q12.15,0,20.6-6.15a28.33,28.33,0,0,0,10.91-15.93H408.62q-4.31,9.14-15.29,9.13-7.65,0-12.21-4.42c-3-2.95-4.87-9.1-5.48-14.91h51Zm-50.84-7.65q2.37-16.24,17-16.25a16,16,0,0,1,11.63,4.36c3,2.91,4.84,6.87,5.54,11.89Z"
-                        />
-                        <path class="cls-1" d="M438,2.11v94h16.63v-94Z" />
-                        <path class="cls-1" d="M468.72,2.11v94h16.63v-94Z" />
-                        <path
-                          class="cls-1"
-                          d="M558,83.18V46.88q0-20.48-28.39-20.47-29.18,0-30.64,23.24h16.38q.52-5.94,3.7-8.38c2.11-1.64,5.59-2.44,10.43-2.44q6.74,0,9.57,2t2.84,6.4a6.43,6.43,0,0,1-2.24,5.35c-1.5,1.19-4,2-7.4,2.44l-10.3.93q-26.13,2.63-26.14,21.26,0,9.63,6.66,15c4.45,3.6,10.41,5.42,17.9,5.42q15,0,21.91-9.91c.45,4.13,1.06,6.91,1.85,8.32h16.64Q558,92.17,558,83.18Zm-16.11-14q0,8.06-4.88,12.35t-12.68,4.29c-3.7,0-6.53-.82-8.52-2.44a8.35,8.35,0,0,1-3-6.81,8.1,8.1,0,0,1,2.84-6.66q2.83-2.31,9.44-3.11l9-1c3.61-.44,6.2-1.36,7.79-2.77Z"
-                        />
-                      </g>
-                    </g>
-                  </svg>
-                  <svg
-                    class="company-svg"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 545.01 34.97"
-                  >
-                    <defs>
-                      <style>
-                        .cls-1 {
-                          fill: var(--tone2);
-                        }
-                      </style>
-                    </defs>
-                    <title>IntelligenceForge</title>
-                    <g id="Layer_2" data-name="Layer 2">
-                      <g id="Layer_1-2" data-name="Layer 1">
-                        <path class="cls-1" d="M0,34.21V.75H5V34.21Z" />
-                        <path
-                          class="cls-1"
-                          d="M54.19.75H59V34.21H53.25L43,18q-4.51-7-6.54-10.76.19,5.6.19,16.82V34.21H31.72V.75H37.5L47.84,17Q52,23.59,54.38,27.78q-.2-5.64-.19-16.88Z"
-                        />
-                        <path
-                          class="cls-1"
-                          d="M110.64.75V5.26H99.54v29H94.42V5.26H83.33V.75Z"
-                        />
-                        <path
-                          class="cls-1"
-                          d="M158.76,5.26H139.92v9.45H157v4.42H139.92V29.7h18.7v4.51H134.89V.75h23.87Z"
-                        />
-                        <path
-                          class="cls-1"
-                          d="M188.75,29.7h16.4v4.51H183.72V.75h5Z"
-                        />
-                        <path
-                          class="cls-1"
-                          d="M234.81,29.7h16.4v4.51H229.78V.75h5Z"
-                        />
-                        <path class="cls-1" d="M275.84,34.21V.75h5V34.21Z" />
-                        <path
-                          class="cls-1"
-                          d="M323.12,16.64h14.57V34.21h-3.85l-.9-4.46Q329.19,35,322,35t-11.51-4.85q-4.38-4.78-4.37-12.64t4.41-12.69Q315,0,322.32,0a15.93,15.93,0,0,1,10.2,3.2,13.13,13.13,0,0,1,4.79,8.6h-5.17a8.61,8.61,0,0,0-3.36-5.36,10.41,10.41,0,0,0-6.41-2,9.9,9.9,0,0,0-8,3.53q-3,3.48-3,9.49t3,9.5a10.17,10.17,0,0,0,8.08,3.52,10.6,10.6,0,0,0,7.38-2.72A9.21,9.21,0,0,0,333,20.91h-9.87Z"
-                        />
-                        <path
-                          class="cls-1"
-                          d="M387.79,5.26H369v9.45H386v4.42H369V29.7h18.7v4.51H363.92V.75h23.87Z"
-                        />
-                        <path
-                          class="cls-1"
-                          d="M435.21.75h4.84V34.21h-5.78L424,18q-4.51-7-6.53-10.76.19,5.6.19,16.82V34.21h-4.89V.75h5.78L428.87,17q4.19,6.62,6.53,10.81-.18-5.64-.19-16.88Z"
-                        />
-                        <path
-                          class="cls-1"
-                          d="M469.81,30.22q-4.43-4.69-4.42-12.74t4.37-12.73A14.78,14.78,0,0,1,481.18,0a15.59,15.59,0,0,1,9.54,3,13.91,13.91,0,0,1,5.12,8.88h-5.07a9.53,9.53,0,0,0-3.46-5.52,10,10,0,0,0-6.13-1.86A9.44,9.44,0,0,0,473.47,8q-2.87,3.5-2.86,9.51T473.47,27a9.46,9.46,0,0,0,7.71,3.5,10.4,10.4,0,0,0,6.49-2.21A9.43,9.43,0,0,0,491,21.85h5a13.59,13.59,0,0,1-4.84,9.69,15.31,15.31,0,0,1-10,3.43A14.75,14.75,0,0,1,469.81,30.22Z"
-                        />
-                        <path
-                          class="cls-1"
-                          d="M545,5.26H526.16v9.45h17.06v4.42H526.16V29.7h18.71v4.51H521.13V.75H545Z"
-                        />
-                      </g>
-                    </g>
-                  </svg>
-                </div>
-              </a>
-              <span class="company-name">Constella</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="contact" id="contact">
-      <div class="contact-title title">Contact</div>
-      <div class="contact-info">You can reach me using the below links</div>
-      <div id="links">
-        <div class="linkedin link">
-          <a href="http://linkedin.com/in/chandrashekhar19" target="_blank">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 32 32"
-              class="svg"
-            >
-              <path
-                class="path1"
-                d="M29.63.001H2.362C1.06.001 0 1.034 0 2.306V29.69C0 30.965 1.06 32 2.362 32h27.27C30.937 32 32 30.965 32 29.69V2.306C32 1.034 30.937.001 29.63.001z"
-              />
-              <path
-                class="path2"
-                d="M4.745 11.997H9.5v15.27H4.745zm2.374-7.6c1.517 0 2.75 1.233 2.75 2.75S8.636 9.9 7.12 9.9a2.76 2.76 0 0 1-2.754-2.753 2.75 2.75 0 0 1 2.753-2.75m5.35 7.6h4.552v2.087h.063c.634-1.2 2.182-2.466 4.5-2.466 4.806 0 5.693 3.163 5.693 7.274v8.376h-4.743V19.84c0-1.77-.032-4.05-2.466-4.05-2.47 0-2.85 1.93-2.85 3.92v7.554h-4.742v-15.27z"
-              />
-            </svg>
-          </a>
-        </div>
-        <div class="gmail link">
-          <?xml version="1.0" encoding="utf-8"?>
-          <!-- Generator: Adobe Illustrator 24.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-          <a href="mailto:cs.botla@gmail./com" target="_blank">
-            <svg
-              version="1.1"
-              id="gmail"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              x="0px"
-              y="0px"
-              viewBox="0 0 192 192"
-              enable-background="new 0 0 192 192"
-              xml:space="preserve"
-              class="svg"
-            >
-              <rect id="bounding_box_1_" fill="none" width="192" height="192" />
-              <g id="art_layer_1_">
-                <g>
-                  <path
-                    class="path1"
-                    d="M8,46v16l18.35,17.76L48,92l4-26.93L48,40l-11.2-8.4C24.93,22.7,8,31.17,8,46"
-                  />
-                  <path
-                    class="path2"
-                    d="M144,40l-4,25.4l4,26.6l19.65-9.73L184,62V46c0-14.83-16.93-23.3-28.8-14.4L144,40z"
-                  />
-                  <path
-                    class="path3"
-                    d="M20,160h28V92L8,62v86C8,154.63,13.37,160,20,160"
-                  />
-                  <path
-                    class="path4"
-                    d="M144,160h28c6.63,0,12-5.37,12-12V62l-40,30V160z"
-                  />
-                  <polygon
-                    class="polygon"
-                    points="96,76 48,40 48,92 96,128 144,92 144,40 		"
-                  />
-                </g>
-              </g>
-            </svg>
-          </a>
-        </div>
-        <div class="github link">
-          <a href="http://github.com/csbotla" target="_blank">
-            <svg
-              viewBox="0 0 512 512"
-              xmlns="http://www.w3.org/2000/svg"
-              class="svg"
-            >
-              <path
-                d="m256 0c-140.609375 0-256 115.390625-256 256 0 119.988281 84.195312 228.984375 196 256v-84.695312c-11.078125 2.425781-21.273438 2.496093-32.550781-.828126-15.128907-4.464843-27.421875-14.542968-36.546875-29.910156-5.816406-9.8125-16.125-20.453125-26.878906-19.671875l-2.636719-29.882812c23.253906-1.992188 43.371093 14.167969 55.3125 34.230469 5.304687 8.921874 11.410156 14.152343 19.246093 16.464843 7.574219 2.230469 15.707032 1.160157 25.183594-2.1875 2.378906-18.972656 11.070313-26.074219 17.636719-36.074219v-.015624c-66.679687-9.945313-93.253906-45.320313-103.800781-73.242188-13.976563-37.074219-6.476563-83.390625 18.238281-112.660156.480469-.570313 1.347656-2.0625 1.011719-3.105469-11.332032-34.230469 2.476562-62.546875 2.984375-65.550781 13.078125 3.867187 15.203125-3.890625 56.808593 21.386718l7.191407 4.320313c3.007812 1.792969 2.0625.769531 5.070312.542969 17.371094-4.71875 35.683594-7.324219 53.726563-7.558594 18.179687.234375 36.375 2.839844 54.464844 7.75l2.328124.234375c-.203124-.03125.632813-.148437 2.035157-.984375 51.972656-31.480469 50.105469-21.191406 64.042969-25.722656.503906 3.007812 14.128906 31.785156 2.917968 65.582031-1.511718 4.65625 45.058594 47.300781 19.246094 115.753906-10.546875 27.933594-37.117188 63.308594-103.796875 73.253907v.015624c8.546875 13.027344 18.816406 19.957032 18.761719 46.832032v105.722656c111.808594-27.015625 196-136.011719 196-256 .003906-140.609375-115.386719-256-255.996094-256zm0 0"
-              />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </section>
-    <footer>Made by Chandra Shekhar | 🍕💻⌨👩‍💻😴🔁</footer>
-  </body>
-  <!-- <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.js"
-    integrity="sha512-UgS0SVyy/0fZ0i48Rr7gKpnP+Jio3oC7M4XaKP3BJUB/guN6Zr4BjU0Hsle0ey2HJvPLHE5YQCXTDrx27Lhe7A=="
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js"
-    integrity="sha512-judXDFLnOTJsUwd55lhbrX3uSoSQSOZR6vNrsll+4ViUFv+XOIr/xaIK96soMj6s5jVszd7I97a0H+WhgFwTEg=="
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.js"
-    integrity="sha512-mq6TSOBEH8eoYFBvyDQOQf63xgTeAk7ps+MHGLWZ6Byz0BqQzrP+3GIgYL+KvLaWgpL8XgDVbIRYQeLa3Vqu6A=="
-    crossorigin="anonymous"
-  ></script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script> -->
+    </header>
 
-  <script src="main.js"></script>
+    <main class="py-gr5">
+      <section id="experience" class="mb-gr6">
+        <h2 class="text-gr-xl font-bold mb-gr4">experience</h2>
+
+        <div class="mb-gr4 border-b border-gray-200 dark:border-gray-800 pb-gr4 last:border-none">
+          <div class="flex justify-between items-baseline flex-wrap mb-gr2">
+            <div>
+              <div class="text-gr-lg font-semibold">full stack developer @ <span
+                  class="text-accent-dark dark:text-accent-light">napses</span></div>
+              <div class="text-gr-base text-gray-600 dark:text-gray-400">oct 2021 - present</div>
+            </div>
+          </div>
+          <ul class="space-y-gr3">
+            <li
+              class="pl-gr3 relative before:content-['→'] before:absolute before:left-0 before:text-accent-dark dark:before:text-accent-light">
+              <strong class="text-accent-dark dark:text-accent-light">mercer - avantos:</strong> improved task and
+              action flows with dynamic forms, dropdowns, and contextual editing using react; integrated apis for task
+              assignment, status updates, and automation across hybrid workflows.
+            </li>
+            <li
+              class="pl-gr3 relative before:content-['→'] before:absolute before:left-0 before:text-accent-dark dark:before:text-accent-light">
+              <strong class="text-accent-dark dark:text-accent-light">trumigo:</strong> revamped package pricing
+              structures and add-on options for vehicles, enhancing customer value; implemented an inventory management
+              system with virtual kits and streamlined stock transfer processes.
+            </li>
+            <li
+              class="pl-gr3 relative before:content-['→'] before:absolute before:left-0 before:text-accent-dark dark:before:text-accent-light">
+              <strong class="text-accent-dark dark:text-accent-light">jiraaf:</strong> enhanced investment flow
+              journey with improved payment failure handling and kyc process; developed comprehensive features for
+              financial advisors including investor dashboards with aggregated financial data.
+            </li>
+            <li
+              class="pl-gr3 relative before:content-['→'] before:absolute before:left-0 before:text-accent-dark dark:before:text-accent-light">
+              <strong class="text-accent-dark dark:text-accent-light">monkeybox:</strong> constructed end-to-end admin
+              workflows for school chain management and user administration; implemented role-based access control and
+              copy mappings for places of delivery from scratch.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Similar pattern for other experience items -->
+        <!-- ... -->
+      </section>
+
+      <section id="projects" class="mb-gr6">
+        <h2 class="text-gr-xl font-bold mb-gr4">projects</h2>
+
+        <div class="mb-gr3">
+          <h3 class="text-gr-lg font-semibold mb-gr2">twitter top links</h3>
+          <p class="mb-gr3 text-gr-base">a web application that shows the most popular users with links in their tweets.
+            the app allows
+            users to discover trending content and influential accounts.</p>
+          <div class="flex flex-wrap gap-gr2">
+            <span
+              class="px-gr2 py-gr1 text-gr-md bg-accent/20 dark:bg-accent-dark/30 text-accent-darker dark:text-accent-light rounded-full">react</span>
+            <span
+              class="px-gr2 py-gr1 text-gr-md bg-accent/20 dark:bg-accent-dark/30 text-accent-darker dark:text-accent-light rounded-full">mongodb</span>
+            <span
+              class="px-gr2 py-gr1 text-gr-md bg-accent/20 dark:bg-accent-dark/30 text-accent-darker dark:text-accent-light rounded-full">rest
+              api</span>
+            <span
+              class="px-gr2 py-gr1 text-gr-md bg-accent/20 dark:bg-accent-dark/30 text-accent-darker dark:text-accent-light rounded-full">twitter
+              api</span>
+            <span
+              class="px-gr2 py-gr1 text-gr-md bg-accent/20 dark:bg-accent-dark/30 text-accent-darker dark:text-accent-light rounded-full">authentication</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="mb-gr6">
+        <h2 class="text-gr-xl font-bold mb-gr4">skills</h2>
+
+        <div class="flex flex-col gap-gr3">
+          <div>
+            <h3 class="text-gr-lg font-semibold mb-gr2">languages</h3>
+            <div class="flex flex-wrap gap-gr2">
+              <span class="px-gr2 py-gr1 text-gr-md bg-accent/20 dark:bg-accent-dark/30 text-accent-darker dark:text-accent-light rounded-full">javascript/typescript</span>
+              <span class="px-gr2 py-gr1 text-gr-md bg-accent/20 dark:bg-accent-dark/30 text-accent-darker dark:text-accent-light rounded-full">html/css</span>
+              <span class="px-gr2 py-gr1 text-gr-md bg-accent/20 dark:bg-accent-dark/30 text-accent-darker dark:text-accent-light rounded-full">sql</span>
+              <span class="px-gr2 py-gr1 text-gr-md bg-accent/20 dark:bg-accent-dark/30 text-accent-darker dark:text-accent-light rounded-full">python</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-gr-lg font-semibold mb-gr2">technologies/frameworks</h3>
+            <div class="flex flex-wrap gap-gr2">
+              <span class="px-gr2 py-gr1 text-gr-md bg-accent/20 dark:bg-accent-dark/30 text-accent-darker dark:text-accent-light rounded-full">linux</span>
+              <span class="px-gr2 py-gr1 text-gr-md bg-accent/20 dark:bg-accent-dark/30 text-accent-darker dark:text-accent-light rounded-full">react/nextjs</span>
+              <span class="px-gr2 py-gr1 text-gr-md bg-accent/20 dark:bg-accent-dark/30 text-accent-darker dark:text-accent-light rounded-full">sequelize</span>
+              <span class="px-gr2 py-gr1 text-gr-md bg-accent/20 dark:bg-accent-dark/30 text-accent-darker dark:text-accent-light rounded-full">git</span>
+              <span class="px-gr2 py-gr1 text-gr-md bg-accent/20 dark:bg-accent-dark/30 text-accent-darker dark:text-accent-light rounded-full">docker</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-gr-lg font-semibold mb-gr2">other</h3>
+            <div class="flex flex-wrap gap-gr2">
+              <span class="px-gr2 py-gr1 text-gr-md bg-accent/20 dark:bg-accent-dark/30 text-accent-darker dark:text-accent-light rounded-full">api design</span>
+              <span class="px-gr2 py-gr1 text-gr-md bg-accent/20 dark:bg-accent-dark/30 text-accent-darker dark:text-accent-light rounded-full">databases</span>
+              <span class="px-gr2 py-gr1 text-gr-md bg-accent/20 dark:bg-accent-dark/30 text-accent-darker dark:text-accent-light rounded-full">unit testing</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Similar pattern for education and achievements sections -->
+      <section id="education" class="mb-gr6">
+        <h2 class="text-gr-xl font-bold mb-gr4">education</h2>
+
+        <div class="mb-gr3">
+          <h3 class="text-gr-lg font-semibold mb-gr2">bachelor of engineering in information technology</h3>
+          <p class="mb-gr2">
+            <span class="text-accent-dark dark:text-accent-light">
+              osmania university
+            </span>
+          </p>
+          <div class="text-gr-base text-gray-600 dark:text-gray-400">2016 - 2020</div>
+        </div>
+      </section>
+      <section id="achievements" class="mb-gr6">
+        <h2 class="text-gr-xl font-bold mb-gr4">achievements</h2>
+
+        <div class="mb-gr3">
+          <ul class="list-disc pl-gr3 space-y-gr2 text-gray-600 dark:text-gray-400">
+            <li>Selected for the final round among <span class="text-accent-dark dark:text-accent-light font-medium">500+ students</span> in the India Code for Good Challenge 2019 conducted by <span class="text-accent-dark dark:text-accent-light">JP Morgan Chase & Co.</span></li>
+            <li>Selected as a participant in the final round of Kony Hackathon Challenge 2019 conducted by <span class="text-accent-dark dark:text-accent-light">Kony</span> among <span class="text-accent-dark dark:text-accent-light font-medium">200+ students</span>.</li>
+            <li>Successfully graduated from the <span class="text-accent-dark dark:text-accent-light">Crio Launch and Crio Launch Plus 2020</span> Programme conducted by Crio.Do. Earned badges under Crio Launch Plus 2020.</li>
+            <li>Achieved a score of <span class="text-accent-dark dark:text-accent-light font-medium">3.8/5</span> and a <span class="text-accent-dark dark:text-accent-light">Bronze badge</span> in Geektrust, testing Data Structures, Extensibility, and Problem Correctness.</li>
+          </ul>
+        </div>
+      </section>
+      <!-- ... -->
+    </main>
+
+    <footer class="py-gr4 text-center text-gr-base text-gray-600 dark:text-gray-400">
+      &copy;
+      <script>document.write(new Date().getFullYear())</script> chandra shekhar botla
+    </footer>
+  </div>
+
+  <script>
+    // Theme handling
+    const htmlEl = document.documentElement;
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    // Theme functions
+    const getThemePreference = () => {
+      // Check if user has explicitly set a theme
+      if ('theme' in localStorage) {
+        return localStorage.theme;
+      }
+      // If no explicit preference, return system preference
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+
+    const applyTheme = (theme) => {
+      if (theme === 'dark') {
+        htmlEl.classList.add('dark');
+        themeToggleBtn.textContent = '☀️';
+      } else {
+        htmlEl.classList.remove('dark');
+        themeToggleBtn.textContent = '🌙';
+      }
+      // Only store in localStorage if user explicitly changes theme
+      if (theme !== getThemePreference()) {
+        localStorage.theme = theme;
+      }
+    };
+
+    // Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      // Only update if user hasn't set an explicit preference
+      if (!('theme' in localStorage)) {
+        applyTheme(e.matches ? 'dark' : 'light');
+      }
+    });
+
+    // Toggle theme
+    themeToggleBtn.addEventListener('click', () => {
+      const currentTheme = htmlEl.classList.contains('dark') ? 'dark' : 'light';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      applyTheme(newTheme);
+    });
+
+    // Initialize theme based on system preference
+    applyTheme(getThemePreference());
+
+    // Mobile menu toggle
+    const toggleMobileMenu = () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('flex');
+      const icon = mobileMenuToggle.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
+    };
+
+    mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+
+    // Handle navigation
+    const navLinks = document.querySelectorAll('.nav-link, #mobile-menu a');
+
+    const updateActiveLink = () => {
+      const sections = document.querySelectorAll('section, header');
+      let currentSection = '';
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= sectionTop - 100) {
+          currentSection = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.toggle('text-accent-dark dark:text-accent-light', link.getAttribute('href') === `#${currentSection}`);
+      });
+    };
+
+    window.addEventListener('scroll', updateActiveLink);
+    updateActiveLink();
+
+    // Handle mobile menu clicks
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        toggleMobileMenu();
+      });
+    });
+  </script>
+</body>
+
 </html>
